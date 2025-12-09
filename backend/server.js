@@ -7,7 +7,10 @@ require('dotenv').config();
 const app = express();
 
 // middleware setup
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins for now
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -1,5 +1,6 @@
 export default function ClientCard({ client }) {
-  const imageUrl = `http://localhost:5000${client.image}`;
+  const API_BASE = import.meta.env.VITE_API_URL.replace('/api', '');
+  const imageUrl = `${API_BASE}${client.image}`;
   
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 text-center">
